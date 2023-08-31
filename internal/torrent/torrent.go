@@ -60,7 +60,7 @@ func CheckStatus(torrentId string) (string, error) {
 	case "Downloading":
 		msg = fmt.Sprintf("Status: %s\tPeers: (In %d | Out %d | Total %d)\tETA: %s", stats.Status, stats.Peers.Incoming, stats.Peers.Outgoing, stats.Peers.Total, stats.ETA)
 	case "Seeding":
-		msg = fmt.Sprintf("Status: %s (%d)\tPeers: (In %d | Out %d | Total %d)", stats.Status, stats.SeededFor, stats.Peers.Incoming, stats.Peers.Outgoing, stats.Peers.Total)
+		msg = fmt.Sprintf("Status: %s (%s)\tPeers: (In %d | Out %d | Total %d)", stats.Status, stats.SeededFor, stats.Peers.Incoming, stats.Peers.Outgoing, stats.Peers.Total)
 	case "Stopping":
 		msg = "Stopping (new torrent will start soon)"
 	case "Stopped":
